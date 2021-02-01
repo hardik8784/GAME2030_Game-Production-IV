@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeControl : MonoBehaviour
 {
     public Material YellowColour;
-
+    public int ColourStatus = 1;        
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,11 @@ public class CubeControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        GetComponent<Renderer>().material = YellowColour;
+        ColourStatus -= 1;
+        if (ColourStatus == 0)
+        {
+            GetComponent<Renderer>().material = YellowColour;
+            GameFlow.RemainingTiles -= 1;
+        }
     }
 }
