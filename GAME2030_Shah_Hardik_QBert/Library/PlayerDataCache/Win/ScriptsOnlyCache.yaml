@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - CubeControl
     - GameFlow
     - MoveQbert
+    - Visability
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -71,15 +72,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13202}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13474}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 13646}
+      Script: {instanceID: 13476}
     - Class: 114
-      Script: {instanceID: 13722}
+      Script: {instanceID: 13648}
     - Class: 114
-      Script: {instanceID: 13860}
+      Script: {instanceID: 13724}
+    - Class: 114
+      Script: {instanceID: 13862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -89,6 +92,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -401,6 +406,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Visability
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
