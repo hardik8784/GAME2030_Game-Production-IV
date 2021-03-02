@@ -21,11 +21,19 @@ public class CubeControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        ColourStatus -= 1;
-        if (ColourStatus == 0)
+        if (other.gameObject.tag == "Qbert")
         {
-            GetComponent<Renderer>().material = YellowColour;
-            GameFlow.RemainingTiles -= 1;
+            ColourStatus -= 1;
+            if (ColourStatus == 0)
+            {
+                GetComponent<Renderer>().material = YellowColour;
+                GameFlow.RemainingTiles -= 1;
+            }
+
+            if(ColourStatus < 0 )
+            {
+                ColourStatus = 0;
+            }
         }
     }
 }

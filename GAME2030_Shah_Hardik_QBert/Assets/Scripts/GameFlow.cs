@@ -36,7 +36,7 @@ public class GameFlow : MonoBehaviour
 
     IEnumerator SpawnRedBall()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         Instantiate(Red_Ball, new Vector3(0, 2, -1), Red_Ball.rotation);
         StartCoroutine(SpawnRedBall());
     }
