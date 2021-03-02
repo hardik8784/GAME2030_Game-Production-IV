@@ -11,7 +11,7 @@ public class GameFlow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(SpawnRedBall());
     }
 
     // Update is called once per frame
@@ -22,6 +22,8 @@ public class GameFlow : MonoBehaviour
             Debug.Log("You Win");
             StartCoroutine(loadNextLevel());
         }
+
+       
     }
 
     IEnumerator loadNextLevel()
@@ -30,6 +32,13 @@ public class GameFlow : MonoBehaviour
         RemainingTiles = 28;
         SceneManager.LoadScene("SampleScene");
         //SceneManager.LoadScene("Win State");
+    }
+
+    IEnumerator SpawnRedBall()
+    {
+        yield return new WaitForSeconds(3);
+        Instantiate(Red_Ball, new Vector3(0, 2, -1), Red_Ball.rotation);
+        StartCoroutine(SpawnRedBall());
     }
 
 }
