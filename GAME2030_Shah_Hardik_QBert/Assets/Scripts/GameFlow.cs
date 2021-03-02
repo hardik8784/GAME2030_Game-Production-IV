@@ -32,7 +32,7 @@ public class GameFlow : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         RemainingTiles = 28;
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Start");
         //SceneManager.LoadScene("Win State");
     }
 

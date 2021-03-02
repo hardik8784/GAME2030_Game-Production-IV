@@ -60,8 +60,11 @@
     <Compile Include="Assets\Scripts\RedBallControl.cs" />
     <Compile Include="Assets\Scripts\MoveQbert.cs" />
     <Compile Include="Assets\Scripts\Visability.cs" />
-    <Compile Include="Assets\Scripts\GameFlow.cs" />
     <Compile Include="Assets\Scripts\GreenBallControl.cs" />
+    <Compile Include="Assets\Scripts\GameFlow.cs" />
+    <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\RightDiscControl.cs" />
+    <Compile Include="Assets\Scripts\LeftDiscControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

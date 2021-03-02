@@ -52,6 +52,24 @@ public class MoveQbert : MonoBehaviour
             GetComponent <Transform>().position = new Vector3(0, 1, 0);
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
+
+        if(other.tag == "Right_Top")
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 4, -1);
+            GetComponent<Rigidbody>().position = new Vector3(0, 0.5f, 0);
+            DelayMove();
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        }
+
+        if(other.tag == "Left_Top")
+        {
+            transform.eulerAngles = new Vector3(0, -270, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
+            GetComponent<Rigidbody>().position = new Vector3(0, 0.5f, 0);
+            DelayMove();
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        }
     }
 
     

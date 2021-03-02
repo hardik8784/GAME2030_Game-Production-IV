@@ -8,6 +8,8 @@ TagManager:
   - Net
   - Red_Ball
   - Green_Ball
+  - Right_Top
+  - Left_Top
   layers:
   - Default
   - TransparentFX
