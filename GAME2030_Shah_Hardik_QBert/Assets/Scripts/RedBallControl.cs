@@ -26,9 +26,6 @@ public class RedBallControl : MonoBehaviour
         {
             GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
         }
-
-        
-
     }
 
 }
