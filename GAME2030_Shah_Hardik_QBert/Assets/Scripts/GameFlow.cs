@@ -12,8 +12,11 @@ public class GameFlow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnRedBall());
-        StartCoroutine(SpawnGreenBall());
+        if (!PauseMenu.isPaused)
+        {
+            StartCoroutine(SpawnRedBall());
+            StartCoroutine(SpawnGreenBall());
+        }   
     }
 
     // Update is called once per frame
