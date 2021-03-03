@@ -3,7 +3,13 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CubeControl
     - GameFlow
+    - GreenBallControl
+    - LeftDiscControl
+    - Main
     - MoveQbert
+    - PauseMenu
+    - RedBallControl
+    - RightDiscControl
     - Visability
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -20,11 +26,12 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Main.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -43,8 +50,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 65
@@ -62,30 +67,38 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 12480}
+      Script: {instanceID: 12416}
     - Class: 114
-      Script: {instanceID: 12512}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 12880}
+      Script: {instanceID: 12484}
     - Class: 114
-      Script: {instanceID: 13186}
+      Script: {instanceID: 12884}
     - Class: 114
-      Script: {instanceID: 13202}
+      Script: {instanceID: 12944}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 13190}
     - Class: 114
-      Script: {instanceID: 13410}
+      Script: {instanceID: 13322}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 13416}
     - Class: 114
-      Script: {instanceID: 13724}
+      Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 13862}
+      Script: {instanceID: 13484}
+    - Class: 114
+      Script: {instanceID: 13656}
+    - Class: 114
+      Script: {instanceID: 13736}
+    - Class: 114
+      Script: {instanceID: 13874}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
@@ -104,6 +117,69 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Scenes/Start.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11824}
+    - Class: 114
+      Script: {instanceID: 12040}
+    - Class: 114
+      Script: {instanceID: 12484}
+    - Class: 114
+      Script: {instanceID: 12516}
+    - Class: 114
+      Script: {instanceID: 12944}
+    - Class: 114
+      Script: {instanceID: 13190}
+    - Class: 114
+      Script: {instanceID: 13206}
+    - Class: 114
+      Script: {instanceID: 13416}
+    - Class: 114
+      Script: {instanceID: 13484}
+    - Class: 114
+      Script: {instanceID: 13500}
+    - Class: 114
+      Script: {instanceID: 13660}
+    - Class: 114
+      Script: {instanceID: 13874}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -276,6 +352,18 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RedBallControl
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LeftDiscControl
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -330,7 +418,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 1fe7e03ece60d8cda983dfd822822254
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveQbert
@@ -411,6 +499,12 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: RightDiscControl
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: Visability
   - hash:
       serializedVersion: 2
@@ -418,6 +512,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GreenBallControl
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -432,6 +532,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 4dce4fe7dcb0e1707f91364cec7a5678
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Main
+  - hash:
+      serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -444,13 +550,19 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 1432460a745775964785b60588990e0e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 254c9f7b65b576c594c93a14edfed4d7
+      Hash: 3c933ae49c8aa70afaa94b0040010bfb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameFlow
@@ -552,5 +664,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: H:/4th Semester/Game Production 4/GAME2030_Game Production IV/GAME2030_Shah_Hardik_QBert/GAME2030_M1_Shah_Hardik_QBert/GAME2030_Shah_Hardik_QBert.exe
+  - Assets/Scenes/Start.unity
+  - Assets/Scenes/Main.unity
+  playerPath: H:/4th Semester/Game Production 4/GAME2030_Game Production IV/GAME2030_Shah_Hardik_QBert/GAME2030_M2_Shah_Hardik_QBert/GAME2030_Shah_Hardik_QBert.exe

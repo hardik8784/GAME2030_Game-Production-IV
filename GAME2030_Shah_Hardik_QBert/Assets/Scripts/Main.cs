@@ -5,6 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
+
+    public GameObject Leaderboard;
+
+
+    void Start()
+    {
+        Leaderboard.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
     public void GoToMain()
     {
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
@@ -14,7 +29,8 @@ public class Main : MonoBehaviour
     public void GoToLeaderBoard()
     {
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
-        UnityEngine.SceneManagement.SceneManager.LoadScene("LeaderBoard", LoadSceneMode.Single);
+        // UnityEngine.SceneManagement.SceneManager.LoadScene("LeaderBoard", LoadSceneMode.Single);
+        Leaderboard.SetActive(true);
     }
 
     public void GoToExit()
@@ -26,5 +42,10 @@ public class Main : MonoBehaviour
     {
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         UnityEngine.SceneManagement.SceneManager.LoadScene("Start", LoadSceneMode.Single);
+    }
+
+    public void LeaderBoardToMain()
+    {
+        Leaderboard.SetActive(false);
     }
 }
