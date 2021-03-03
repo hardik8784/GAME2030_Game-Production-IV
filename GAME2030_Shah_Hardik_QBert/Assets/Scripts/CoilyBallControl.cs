@@ -15,7 +15,12 @@ public class CoilyBallControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GameObject QbertReference = GameObject.Find("Coily");
+
+        if(!Coily)
+        {
+            Debug.Log("Instantiate CoilyBall again");
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -36,7 +41,8 @@ public class CoilyBallControl : MonoBehaviour
         {
             // GetComponent<Transform>().position = new Vector3(3, -4, -3);
             // GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            Instantiate(Coily, new Vector3(3, -4, -3), Coily.rotation);
+          //  Instantiate(Coily, new Vector3(5 ,-3 , -1), Coily.rotation);
+            Instantiate(Coily, new Vector3(0, 0.5f, 0), Coily.rotation);
         }
     }
 

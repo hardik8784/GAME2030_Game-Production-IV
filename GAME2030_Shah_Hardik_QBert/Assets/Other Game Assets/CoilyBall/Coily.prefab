@@ -379,9 +379,10 @@ GameObject:
   - component: {fileID: 4404661479626491891}
   - component: {fileID: 5782879389224818983}
   - component: {fileID: 7763857510872849061}
+  - component: {fileID: 4606488372050544435}
   m_Layer: 0
   m_Name: Coily
-  m_TagString: Untagged
+  m_TagString: Coily
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,7 +417,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!65 &7763857510872849061
 BoxCollider:
@@ -429,8 +430,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.51967, z: 1}
-  m_Center: {x: 0, y: 0.74493957, z: 0}
+  m_Size: {x: 1.4118814, y: 0.083589554, z: 0.5719414}
+  m_Center: {x: -0.60111284, y: -0.024747133, z: 0.060749203}
+--- !u!114 &4606488372050544435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3921316875002944841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2548f68e436a6534f9350d23fa641746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4056430866027446705
 GameObject:
   m_ObjectHideFlags: 0
