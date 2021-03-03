@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 40
+  controlID: 20
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,10 +124,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 708, y: 492}
-  m_MaxSize: {x: 18003, y: 14042}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 112
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,8 +147,8 @@ MonoBehaviour:
     y: 0
     width: 448
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -293,21 +293,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Other Game Assets/CoilyBall
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Other Game Assets/CoilyBall
   m_LastFoldersGridSize: -1
   m_LastProjectPath: H:\4th Semester\Game Production 4\GAME2030_Game Production IV\GAME2030_Shah_Hardik_QBert
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3c380000
-    m_LastClickedID: 14396
-    m_ExpandedIDs: 000000002838000000ca9a3b
+    m_SelectedIDs: d8400000
+    m_LastClickedID: 16600
+    m_ExpandedIDs: 000000003c3800004238000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -335,7 +335,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000028380000
+    m_ExpandedIDs: 000000003c380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -459,21 +459,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 28ddffff48ddffffe6deffff04dfffff62e5ffffe6e8ffff7aefffffa4efffff60fbffff183700003a3700004a370000863700008a370000ba3b0000d43b0000345200005652000066520000a6520000f4520000
+      m_ExpandedIDs: 4eeeffff50eeffff52eeffff54eeffff56eeffff58eeffff5aeeffff5ceeffff5eeeffff60eeffff62eeffff64eeffff66eeffff68eeffff6aeeffff6ceeffff6eeeffff70eeffff72eeffffaceeffffb8eeffffbceeffff1af5ffff92faffffb6faffff60fbffffe2410000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: joint2
+        m_OriginalName: joint2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -4436
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -519,9 +519,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 315.07928, y: 259.1314, z: -101.64465}
+    m_Target: {x: 2.6178288, y: -2.0196066, z: -5.9392257}
     speed: 2
-    m_Value: {x: 315.07928, y: 259.1314, z: -101.64465}
+    m_Value: {x: 2.6178288, y: -2.0196066, z: -5.9392257}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -568,13 +568,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.04930464, y: -0.08380209, z: -0.0041953363, w: 0.9952761}
+    m_Target: {x: 0.22582543, y: -0.41075677, z: 0.10571777, w: 0.87701386}
     speed: 2
-    m_Value: {x: -0.049303513, y: -0.083800174, z: -0.0041952403, w: 0.9952533}
+    m_Value: {x: 0.22582005, y: -0.41074696, z: 0.10571525, w: 0.87699294}
   m_Size:
-    m_Target: 606.2178
+    m_Target: 5.1239314
     speed: 2
-    m_Value: 606.2178
+    m_Value: 5.1239314
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -708,10 +708,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1070
-    y: 749
-    width: 409
-    height: 250
+    x: 1063
+    y: 500
+    width: 407
+    height: 499
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &17
 MonoBehaviour:

@@ -10,6 +10,8 @@ TagManager:
   - Green_Ball
   - Right_Top
   - Left_Top
+  - Coily_Ball
+  - Coily
   layers:
   - Default
   - TransparentFX

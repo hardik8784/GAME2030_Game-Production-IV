@@ -9,6 +9,8 @@ public class GameFlow : MonoBehaviour
     public static int RemainingTiles = 28;
     public Transform Red_Ball;
     public Transform Green_Ball;
+    public Transform Coily_Ball;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,8 @@ public class GameFlow : MonoBehaviour
         {
             StartCoroutine(SpawnRedBall());
             StartCoroutine(SpawnGreenBall());
+            //    StartCoroutine(SpawnCoilyBall());
+            SpawnCoilyBall();
         }   
     }
 
@@ -51,6 +55,12 @@ public class GameFlow : MonoBehaviour
         yield return new WaitForSeconds(7);
         Instantiate(Green_Ball, new Vector3(1, 2, 0), Green_Ball.rotation);
         StartCoroutine(SpawnGreenBall());
+    }
+
+    public void SpawnCoilyBall()
+    {
+        Instantiate(Coily_Ball, new Vector3(1, 2, -1), Coily_Ball.rotation);
+       // StartCoroutine(SpawnCoilyBall());
     }
 
 }
