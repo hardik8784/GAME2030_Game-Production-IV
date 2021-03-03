@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CoilyBallControl
+    - CoilyControl
     - CubeControl
     - GameFlow
     - GreenBallControl
@@ -96,7 +97,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13738}
     - Class: 114
-      Script: {instanceID: 13876}
+      Script: {instanceID: 13784}
+    - Class: 114
+      Script: {instanceID: 13878}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -167,7 +170,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13662}
     - Class: 114
-      Script: {instanceID: 13876}
+      Script: {instanceID: 13878}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -587,6 +590,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: b760eb763cd4bf5cbd4edeac665a2086
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CoilyControl
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

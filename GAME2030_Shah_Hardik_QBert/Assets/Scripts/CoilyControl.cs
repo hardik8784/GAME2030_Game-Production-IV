@@ -17,72 +17,89 @@ public class CoilyControl : MonoBehaviour
     void Update()
     {
         GameObject QbertReference = GameObject.FindWithTag("Qbert");
-        //if(QbertReference)
+
+        //if (QbertReference.transform.position.y < 0 && QbertReference.transform.position.z < 0)
         //{
-        //    Vector3 QbertPosition = new Vector3 (QbertReference.transform.position.x, QbertReference.transform.position.y, QbertReference.transform.position.z);
-        //    GetComponent<Rigidbody>().position = new Vector3(QbertPosition.x, QbertPosition.y, QbertPosition.z);
-        //    //Vector3 TargetPosition = new Vector3 (QbertPosition.x, QbertPosition.y, QbertPosition.z);
-        //   // Debug.Log("Target Position: " + TargetPosition);
+        //    //transform.eulerAngles = new Vector3(0, -180, 0);
+        //    //for (int i = 0; i < 6; i++)
+        //    //{
+        //    //    GetComponent<Rigidbody>().velocity = new Vector3(0, -i, -i);
+        //    //}
+        //    if (Random.Range(0, 2) == 0)
+        //    {
+        //        GetComponent<Rigidbody>().velocity = new Vector3(0, 4, -1);
+        //    }
+        //    else
+        //    {
+        //        GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
+        //    }
         //}
 
-        if (QbertReference.transform.position.y < 0 && QbertReference.transform.position.z < 0)
+        //if (QbertReference.transform.position.x > 0 && QbertReference.transform.position.y < 0 )
+        //{
+        //    if (Random.Range(0, 2) == 0)
+        //    {
+        //        GetComponent<Rigidbody>().velocity = new Vector3(0, 4, -1);
+        //    }
+        //    else
+        //    {
+        //        GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
+        //    }
+
+        //    //transform.eulerAngles = new Vector3(0, -270, 0);
+        //    //for (int i = 0; i < 6; i++)
+        //    //{
+        //    //    GetComponent<Rigidbody>().velocity = new Vector3(i, -i, -i);
+        //    //}
+        //}
+
+        //if(QbertReference.transform.position.x < 6  && QbertReference.transform.position.y < -6)
+        //{
+        //    //transform.eulerAngles = new Vector3(0, -90, 0);
+
+        //    //for (int i = 6; i < 0; i--)
+        //    //{
+        //    //    GetComponent<Rigidbody>().velocity = new Vector3(i, -i, 0);
+        //    //}
+
+        //    if (Random.Range(0, 2) == 0)
+        //    {
+        //        GetComponent<Rigidbody>().velocity = new Vector3(0, 4, -1);
+        //    }
+        //    else
+        //    {
+        //        GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
+        //    }
+        //}
+
+        //if (QbertReference.transform.position.y < -6 && QbertReference.transform.position.z < -6)
+        //{
+        //    //transform.eulerAngles = new Vector3(0, -360, 0);
+        //    //for (int i = 0; i < 6; i++)
+        //    //{
+        //    //    GetComponent<Rigidbody>().velocity = new Vector3(i, -i, -i);
+        //    //}
+        //    if (Random.Range(0, 2) == 0)
+        //    {
+        //        GetComponent<Rigidbody>().velocity = new Vector3(0, 4, -1);
+        //    }
+        //    else
+        //    {
+        //        GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
+        //    }
+        //}
+
+        
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(Random.Range(0,2) == 0 )
         {
-            transform.eulerAngles = new Vector3(0, -180, 0);
-           
-            transform.eulerAngles = new Vector3(0, -180, 0);
-            for (int i = 0; i < 6; i++)
-            {
-                GetComponent<Rigidbody>().velocity = new Vector3(0, -i, -i);
-            }
-
-                //CoilyJump = "Yes";
-                //transform.eulerAngles = new Vector3(0, -180, 0);
-                //for(int i = 0; i < 6; i++)
-                //{
-                //    GetComponent<Rigidbody>().velocity = new Vector3(0, -i, -i);
-
-                //    if(QbertReference.transform.position == GetComponent<Rigidbody>().position )
-                //    {
-                //        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-                //    }
-                //   // transform.position = new Vector3(0, 1 * Time.deltaTime, 1 * Time.deltaTime);
-                //}
-                //CoilyJump = "No";
-                //GetComponent<Rigidbody>().velocity = new Vector3(0, 4, -1);
-                // transform.position += new Vector3(0 , 1* Time.deltaTime, 1 * Time.deltaTime);
-                //transform.position = new Vector3(0, 1 * Time.deltaTime, 1 * Time.deltaTime);
-
-            }
-
-        if (QbertReference.transform.position.x > 0 && QbertReference.transform.position.y < 0 )
-        {
-            
-            transform.eulerAngles = new Vector3(0, -270, 0);
-            for (int i = 0; i < 6; i++)
-            {
-                GetComponent<Rigidbody>().velocity = new Vector3(i, -i, -i);
-            }
-
-            GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
-        }
-
-        if (Input.GetKeyDown("a") )
-        {
-            transform.eulerAngles = new Vector3(0, -360, 0);
             GetComponent<Rigidbody>().velocity = new Vector3(0, 6, 1);
         }
-
-        if (Input.GetKeyDown("s"))
+        else
         {
-           
-            transform.eulerAngles = new Vector3(0, -270, 0);
-            GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
-        }
-
-        if (Input.GetKeyDown("d") )
-        {
-          
-            transform.eulerAngles = new Vector3(0, -90, 0);
             GetComponent<Rigidbody>().velocity = new Vector3(-1, 6, 0);
         }
     }

@@ -39,10 +39,7 @@ public class CoilyBallControl : MonoBehaviour
     {
         if (other.tag == "Net")
         {
-            // GetComponent<Transform>().position = new Vector3(3, -4, -3);
-            // GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-          //  Instantiate(Coily, new Vector3(5 ,-3 , -1), Coily.rotation);
-            Instantiate(Coily, new Vector3(0, 0.5f, 0), Coily.rotation);
+            Instantiate(Coily, new Vector3(3 ,-3 , -3), Coily.rotation);
         }
     }
 
