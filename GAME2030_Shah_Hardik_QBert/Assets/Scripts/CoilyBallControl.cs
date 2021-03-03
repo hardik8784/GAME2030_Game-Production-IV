@@ -39,7 +39,7 @@ public class CoilyBallControl : MonoBehaviour
     {
         if (other.tag == "Net")
         {
-            Instantiate(Coily, new Vector3(3 ,-3 , -3), Coily.rotation);
+            Instantiate(Coily, new Vector3(3 ,-4 , -3), Coily.rotation);
         }
     }
 

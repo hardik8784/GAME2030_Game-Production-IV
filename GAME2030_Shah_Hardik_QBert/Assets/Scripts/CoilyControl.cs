@@ -16,7 +16,7 @@ public class CoilyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject QbertReference = GameObject.FindWithTag("Qbert");
+        //GameObject QbertReference = GameObject.FindWithTag("Qbert");
 
         //if (QbertReference.transform.position.y < 0 && QbertReference.transform.position.z < 0)
         //{
@@ -94,13 +94,37 @@ public class CoilyControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if(Random.Range(0,2) == 0 )
+        GameObject QbertReference = GameObject.FindWithTag("Qbert");
+        //if(Random.Range(0,2) == 0 )
+        //{
+        //    GetComponent<Rigidbody>().velocity = new Vector3(0, 6, 1);
+        //}
+        //else
+        //{
+        //    GetComponent<Rigidbody>().velocity = new Vector3(-1, 6, 0);
+        //}
+        if(transform.position.x == QbertReference.transform.position.x || transform.position.y > QbertReference.transform.position.y || transform.position.z > QbertReference.transform.position.z)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 6, 1);
+            transform.eulerAngles = new Vector3(0, -180, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 4, -1);
         }
-        else
+
+        if(transform.position.x < QbertReference.transform.position.x || transform.position.y > QbertReference.transform.position.y || transform.position.z == QbertReference.transform.position.z)
         {
+            transform.eulerAngles = new Vector3(0, -270, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
+        }
+
+        if(transform.position.x > QbertReference.transform.position.x || transform.position.y < QbertReference.transform.position.y || transform.position.z == QbertReference.transform.position.z)
+        {
+            transform.eulerAngles = new Vector3(0, -90, 0);
             GetComponent<Rigidbody>().velocity = new Vector3(-1, 6, 0);
+        }
+
+        if(transform.position.x == QbertReference.transform.position.x || transform.position.y < QbertReference.transform.position.y || transform.position.z < QbertReference.transform.position.z)
+        {
+            transform.eulerAngles = new Vector3(0, -360, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 6, 1);
         }
     }
 
