@@ -5,7 +5,9 @@ using UnityEngine;
 public class CubeControl : MonoBehaviour
 {
     public Material YellowColour;
-    public int ColourStatus = 1;        
+    public int ColourStatus = 1;
+    public AudioClip Qbert_Land;
+   
 
     // Start is called before the first frame update
     void Start()
