@@ -12,6 +12,7 @@ public class GameFlow : MonoBehaviour
     public Transform Coily_Ball;
     public static int RemainingLives = 3;
     public static string PauseBoard = "No";
+    public static int Player_Score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,8 @@ public class GameFlow : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         RemainingTiles = 28;
+        Player_Score += 1000;
+        Debug.Log("Clear the Level : " + Player_Score.ToString());
         SceneManager.LoadScene("Start");
         //SceneManager.LoadScene("Win State");
     }

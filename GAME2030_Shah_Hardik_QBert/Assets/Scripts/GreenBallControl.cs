@@ -30,4 +30,14 @@ public class GreenBallControl : MonoBehaviour
             GetComponent<Rigidbody>().velocity = new Vector3(1, 4, 0);
         }
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Qbert")
+        {
+            GameFlow.Player_Score += 100;
+            Debug.Log("Collect the Green_Ball : " + GameFlow.Player_Score.ToString());
+        }
+    }
 }

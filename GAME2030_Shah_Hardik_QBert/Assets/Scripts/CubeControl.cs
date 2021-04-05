@@ -28,6 +28,8 @@ public class CubeControl : MonoBehaviour
             {
                 GetComponent<Renderer>().material = YellowColour;
                 GameFlow.RemainingTiles -= 1;
+                GameFlow.Player_Score += 25;
+                Debug.Log("Player changing the Cube : " + GameFlow.Player_Score.ToString());
             }
 
             if(ColourStatus < 0 )

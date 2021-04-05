@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 132
+  controlID: 95
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,7 +176,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -293,21 +293,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Other Game Assets/GreenBall
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Other Game Assets/GreenBall
   m_LastFoldersGridSize: -1
   m_LastProjectPath: H:\4th Semester\Game Production 4\GAME2030_Game Production IV\GAME2030_Shah_Hardik_QBert
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3c3b0000
-    m_LastClickedID: 15164
-    m_ExpandedIDs: 000000002e3b0000383b000000ca9a3b
+    m_SelectedIDs: a6500000
+    m_LastClickedID: 20646
+    m_ExpandedIDs: 000000002a3b0000363b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -335,7 +335,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e3b0000
+    m_ExpandedIDs: 000000002a3b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -456,10 +456,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      scrollPos: {x: 0, y: 495}
+      m_SelectedIDs: c2390000
       m_LastClickedID: 0
-      m_ExpandedIDs: 30afffffc0b4ffff16b5ffff1eb9ffff20bdffff22bdffff8ebdffff22beffff48beffff40fbffff12380000
+      m_ExpandedIDs: 5cfaffff40fbffff1c3d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -519,9 +519,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 19.874432, y: 10.495628, z: 18.50837}
+    m_Target: {x: -0.96188545, y: -1.8225625, z: -1.9871845}
     speed: 2
-    m_Value: {x: 19.874432, y: 10.495628, z: 18.50837}
+    m_Value: {x: -0.96188545, y: -1.8225625, z: -1.9871845}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -568,13 +568,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.24833167, y: 0.08702482, z: -0.022461189, w: 0.96452075}
+    m_Target: {x: 0.098398946, y: -0.37667233, z: 0.040214013, w: 0.9202521}
     speed: 2
-    m_Value: {x: 0.24832587, y: 0.08702279, z: -0.022460664, w: 0.9644982}
+    m_Value: {x: 0.0983967, y: -0.37666374, z: 0.040213097, w: 0.9202311}
   m_Size:
-    m_Target: 19.480267
+    m_Target: 7.0535116
     speed: 2
-    m_Value: 19.480267
+    m_Value: 7.0535116
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -592,7 +592,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.45189172, y: -0.08145113, z: 0.041421138, w: 0.88740575}
+  m_LastSceneViewRotation: {x: 0.17580613, y: -0.42660353, z: 0.084913574, w: 0.88313276}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
