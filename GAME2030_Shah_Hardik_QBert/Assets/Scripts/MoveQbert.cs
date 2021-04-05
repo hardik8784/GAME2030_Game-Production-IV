@@ -21,6 +21,7 @@ public class MoveQbert : MonoBehaviour
             midJump = "Yes";
             transform.eulerAngles = new Vector3(0, -180 , 0);
             GetComponent<Rigidbody>().velocity = new Vector3(0, 4, -1);
+          
         }
 
         if (Input.GetKeyDown("9") && (midJump == "No"))
@@ -51,6 +52,8 @@ public class MoveQbert : MonoBehaviour
         {
             GetComponent <Transform>().position = new Vector3(0, 1, 0);
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            GameFlow.RemainingLives -= 1;
+            Debug.Log("RemainingLives :" + GameFlow.RemainingLives.ToString());
         }
 
         if(other.tag == "Right_Top")
@@ -72,11 +75,21 @@ public class MoveQbert : MonoBehaviour
         }
     }
 
-    
+
 
     private void OnCollisionEnter(Collision other)
     {
-        StartCoroutine(DelayMove());
+        if (other.gameObject.tag == "Cube")
+        {
+            StartCoroutine(DelayMove());
+        }
+    
+        if(other.gameObject.tag == "Green_Ball")
+        {
+            GameFlow.PauseBoard = "Yes";
+            StartCoroutine(DelayPause());
+           
+        }
     }
 
     
@@ -85,6 +98,13 @@ public class MoveQbert : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         midJump = "No";
+    }
+
+
+    IEnumerator DelayPause()
+    {
+        yield return new WaitForSeconds(1.0f);
+        GameFlow.PauseBoard = "No";
     }
 
 }

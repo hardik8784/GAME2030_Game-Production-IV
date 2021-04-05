@@ -13,7 +13,10 @@ public class GreenBallControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameFlow.PauseBoard == "Yes")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision other)

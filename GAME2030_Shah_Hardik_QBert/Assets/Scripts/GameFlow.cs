@@ -10,6 +10,8 @@ public class GameFlow : MonoBehaviour
     public Transform Red_Ball;
     public Transform Green_Ball;
     public Transform Coily_Ball;
+    public static int RemainingLives = 3;
+    public static string PauseBoard = "No";
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,10 @@ public class GameFlow : MonoBehaviour
             StartCoroutine(loadNextLevel());
         }
 
+        if(RemainingLives < 1)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
        
     }
 

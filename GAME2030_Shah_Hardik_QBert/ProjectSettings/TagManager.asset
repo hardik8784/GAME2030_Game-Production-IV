@@ -12,6 +12,7 @@ TagManager:
   - Left_Top
   - Coily_Ball
   - Coily
+  - Cube
   layers:
   - Default
   - TransparentFX
