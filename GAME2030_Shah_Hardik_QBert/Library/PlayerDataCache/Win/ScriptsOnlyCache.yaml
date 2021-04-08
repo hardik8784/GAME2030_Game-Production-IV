@@ -33,6 +33,51 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   sceneClasses:
+    Assets/Scenes/GameOver.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11824}
+    - Class: 114
+      Script: {instanceID: 12486}
+    - Class: 114
+      Script: {instanceID: 13192}
+    - Class: 114
+      Script: {instanceID: 13418}
+    - Class: 114
+      Script: {instanceID: 13486}
+    - Class: 114
+      Script: {instanceID: 13878}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Main.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -57,6 +102,10 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -316,7 +365,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 4b9ad00c4144f1f71a00261a3e166647
+      Hash: 4b8d1ca3064190a5c1853eff762b8f6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CubeControl
@@ -370,7 +419,7 @@ ScriptsOnlyBuild:
     className: RedBallControl
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 31d49903812f0098d715212aeb866572
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LeftDiscControl
@@ -430,7 +479,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 1fe7e03ece60d8cda983dfd822822254
+      Hash: 04d4706b7ab035732ba7abf550891df6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveQbert
@@ -508,7 +557,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: a50faa02fc497dbf9a79d6163695088e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RightDiscControl
@@ -526,7 +575,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 7b171eacfca7605dc3aaf6316a6747e2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GreenBallControl
@@ -574,7 +623,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 69cc28b3f733620248f7c5cc4ba8ddbe
+      Hash: ffbc5aeccbc0930018d9ac66245ea5ae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameFlow
@@ -684,4 +733,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Main.unity
-  playerPath: H:/4th Semester/Game Production 4/GAME2030_Game Production IV/GAME2030_Shah_Hardik_QBert/GAME2030_M2_Shah_Hardik_QBert/GAME2030_Shah_Hardik_QBert.exe
+  - Assets/Scenes/GameOver.unity
+  playerPath: H:/4th Semester/Game Production 4/GAME2030_Game Production IV/GAME2030_Shah_Hardik_QBert/GAME2030_M3_Shah_Hardik_QBert/GAME2030_Shah_Hardik_QBert.exe

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class GameFlow : MonoBehaviour
@@ -13,6 +14,12 @@ public class GameFlow : MonoBehaviour
     public static int RemainingLives = 3;
     public static string PauseBoard = "No";
     public static int Player_Score = 0;
+    public TMP_Text Player_ScoreText;
+
+
+    public GameObject Image1;
+    public GameObject Image2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +46,18 @@ public class GameFlow : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
-       
+
+        if(RemainingLives == 2)
+        {
+            Image1.transform.position = new Vector3(1000, 1000, 1000);
+        }
+
+        if (RemainingLives == 1)
+        {
+            Image2.transform.position = new Vector3(1000, 1000, 1000);
+        }
+
+        Player_ScoreText.text = Player_Score.ToString();
     }
 
     IEnumerator loadNextLevel()

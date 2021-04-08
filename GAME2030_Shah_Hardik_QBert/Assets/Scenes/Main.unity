@@ -6185,6 +6185,9 @@ MonoBehaviour:
   Red_Ball: {fileID: 6277898795630476004, guid: 93f0ff6a14a3d584faf7fd37ad66f895, type: 3}
   Green_Ball: {fileID: 2504971180250393045, guid: e5d21cebc20cb0a4a8ac2bac1f12a408, type: 3}
   Coily_Ball: {fileID: 4083740283662322709, guid: 6a32c634a24a85b46804d1c6c5f5954f, type: 3}
+  Player_ScoreText: {fileID: 1736979947}
+  Image1: {fileID: 125166247}
+  Image2: {fileID: 1901191065}
 --- !u!114 &1138682086
 MonoBehaviour:
   m_ObjectHideFlags: 0
