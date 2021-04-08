@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RightDiscControl : MonoBehaviour
 {
+    public AudioSource ElevatorSound;
+    public AudioClip RightDiscSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,8 @@ public class RightDiscControl : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         GetComponent<Rigidbody>().velocity = new Vector3(-2, 2, 0);
+        ElevatorSound.clip = RightDiscSound;
+        ElevatorSound.Play();
     }
 
 }

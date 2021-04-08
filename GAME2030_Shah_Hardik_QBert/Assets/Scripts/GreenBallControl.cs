@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GreenBallControl : MonoBehaviour
 {
+    public AudioSource PickupSound;
+    public AudioClip GreenBallPickupSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,8 @@ public class GreenBallControl : MonoBehaviour
         {
             GameFlow.Player_Score += 100;
             Debug.Log("Collect the Green_Ball : " + GameFlow.Player_Score.ToString());
+            PickupSound.clip = GreenBallPickupSound;
+            PickupSound.Play();
         }
     }
 }

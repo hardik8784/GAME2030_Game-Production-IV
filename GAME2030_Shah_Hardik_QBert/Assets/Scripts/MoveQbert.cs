@@ -5,7 +5,8 @@ using UnityEngine;
 public class MoveQbert : MonoBehaviour
 {
     public string midJump = "No";
-
+    public AudioSource DieSound;
+    public AudioClip QbertDies;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,8 @@ public class MoveQbert : MonoBehaviour
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             GameFlow.RemainingLives -= 1;
             Debug.Log("RemainingLives :" + GameFlow.RemainingLives.ToString());
+            DieSound.clip = QbertDies;
+            DieSound.Play();
         }
 
         if(other.tag == "Right_Top")
@@ -81,7 +84,7 @@ public class MoveQbert : MonoBehaviour
     {
         if (other.gameObject.tag == "Cube")
         {
-            StartCoroutine(DelayMove());
+            StartCoroutine(DelayMove()); 
         }
     
         if(other.gameObject.tag == "Green_Ball")

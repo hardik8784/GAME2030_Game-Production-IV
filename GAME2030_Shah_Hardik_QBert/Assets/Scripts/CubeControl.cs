@@ -6,8 +6,12 @@ public class CubeControl : MonoBehaviour
 {
     public Material YellowColour;
     public int ColourStatus = 1;
-    public AudioClip Qbert_Land;
-   
+    public AudioSource CubeSounds;
+    public AudioClip ChangeColorSound;
+    public AudioClip NoColorChangeSound;
+    public AudioClip BallSound;
+    public AudioClip CoilySound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +36,32 @@ public class CubeControl : MonoBehaviour
                 GameFlow.RemainingTiles -= 1;
                 GameFlow.Player_Score += 25;
                 Debug.Log("Player changing the Cube : " + GameFlow.Player_Score.ToString());
+                CubeSounds.clip = ChangeColorSound;
+                CubeSounds.Play();
             }
+            else
+            {
+                CubeSounds.clip = NoColorChangeSound;
+                CubeSounds.Play();
+            }
+
 
             if(ColourStatus < 0 )
             {
                 ColourStatus = 0;
             }
+        }
+
+        if(other.gameObject.tag == "Red_Ball" || other.gameObject.tag == "Coily_Ball" || other.gameObject.tag == "Green_Ball")
+        {
+            CubeSounds.clip = BallSound;
+            CubeSounds.Play();
+        }
+
+        if(other.gameObject.tag == "Coily")
+        {
+            CubeSounds.clip = CoilySound;
+            CubeSounds.Play();
         }
     }
 }
