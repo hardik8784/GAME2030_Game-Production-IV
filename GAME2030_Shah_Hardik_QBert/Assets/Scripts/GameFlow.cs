@@ -20,6 +20,7 @@ public class GameFlow : MonoBehaviour
     public GameObject Image1;
     public GameObject Image2;
 
+    //public float delay = 10000.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,25 +37,38 @@ public class GameFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(RemainingTiles == 0)
+        if(RemainingTiles < 0)
         {
             Debug.Log("You Win");
             StartCoroutine(loadNextLevel());
+            //SceneManager.LoadScene("Start");
+          
+           
         }
 
         if(RemainingLives < 1)
         {
             SceneManager.LoadScene("GameOver");
+            Debug.Log("Changing to GameOver");
+           
+            Debug.Log("Finished  GameOver");
+            //StartCoroutine(LoadLevelAfterDelay(delay));
+         
+            SceneManager.LoadScene("Start");
+            Debug.Log("Changed to Start");
+
         }
 
         if(RemainingLives == 2)
         {
-            Image1.transform.position = new Vector3(1000, 1000, 1000);
+            //Image1.transform.position = new Vector3(1000, 1000, 1000);
+            Destroy(Image1);
         }
 
         if (RemainingLives == 1)
         {
-            Image2.transform.position = new Vector3(1000, 1000, 1000);
+            //Image2.transform.position = new Vector3(1000, 1000, 1000);
+            Destroy(Image2);
         }
 
         Player_ScoreText.text = Player_Score.ToString();
@@ -67,6 +81,7 @@ public class GameFlow : MonoBehaviour
         Player_Score += 1000;
         Debug.Log("Clear the Level : " + Player_Score.ToString());
         SceneManager.LoadScene("Start");
+        Player_Score = 0;
         //SceneManager.LoadScene("Win State");
     }
 
@@ -83,6 +98,12 @@ public class GameFlow : MonoBehaviour
         Instantiate(Green_Ball, new Vector3(1, 2, 0), Green_Ball.rotation);
         StartCoroutine(SpawnGreenBall());
     }
+
+    //IEnumerator LoadLevelAfterDelay(float delay)
+    //{
+    //    yield return new WaitForSeconds(delay);
+       
+    //}
 
     public void SpawnCoilyBall()
     {
