@@ -6277,6 +6277,8 @@ MonoBehaviour:
   Player_ScoreText: {fileID: 1736979947}
   Image1: {fileID: 125166247}
   Image2: {fileID: 1901191065}
+  Right_Disc: {fileID: 1106827181}
+  Left_Disc: {fileID: 467230522}
   WinnerSound: {fileID: 1138682087}
   Winner: {fileID: 8300000, guid: 9758847ff9ef576418a552fb150f0edc, type: 3}
 --- !u!114 &1138682086

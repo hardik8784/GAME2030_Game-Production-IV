@@ -18,6 +18,9 @@ public class GameFlow : MonoBehaviour
     public GameObject Image1;
     public GameObject Image2;
 
+    public GameObject Right_Disc;
+    public GameObject Left_Disc;
+
     public AudioSource WinnerSound;
     public AudioClip Winner;
 
@@ -41,6 +44,7 @@ public class GameFlow : MonoBehaviour
             Debug.Log("You Win");
             WinnerSound.clip = Winner;
             WinnerSound.Play();
+           
             StartCoroutine(loadNextLevel());
         }
 
@@ -66,6 +70,16 @@ public class GameFlow : MonoBehaviour
         yield return new WaitForSeconds(5);
         RemainingTiles = 28;
         Player_Score += 1000;
+        if (Right_Disc)
+        {
+            Player_Score += 100;
+            Debug.Log("Right Disc Available so Player Score : " + Player_Score.ToString());
+            if (Left_Disc)
+            {
+                Player_Score += 100;
+                Debug.Log("Left Disc Available so Player Score : " + Player_Score.ToString());
+            }
+        }
         Debug.Log("Clear the Level : " + Player_Score.ToString());
         SceneManager.LoadScene("Start");
         Player_Score = 0;
