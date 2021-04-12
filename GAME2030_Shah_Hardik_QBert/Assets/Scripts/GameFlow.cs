@@ -46,17 +46,18 @@ public class GameFlow : MonoBehaviour
            
         }
 
-        if(RemainingLives < 1)
+        if(RemainingLives == 0)
         {
-            SceneManager.LoadScene("GameOver");
-            Debug.Log("Changing to GameOver");
-           
-            Debug.Log("Finished  GameOver");
-            //StartCoroutine(LoadLevelAfterDelay(delay));
-         
-            SceneManager.LoadScene("Start");
-            Debug.Log("Changed to Start");
+            //SceneManager.LoadScene("GameOver");
+            //Debug.Log("Changing to GameOver");
 
+            //Debug.Log("Finished  GameOver");
+            ////StartCoroutine(LoadLevelAfterDelay(delay));
+            //StartCoroutine(loadNextLevel());
+            ////SceneManager.LoadScene("Start");
+            ////StartCoroutine(loadNextLevel());
+            //Debug.Log("Changed to Start");
+            StartCoroutine(loadTwoLevel());
         }
 
         if(RemainingLives == 2)
@@ -82,8 +83,24 @@ public class GameFlow : MonoBehaviour
         Debug.Log("Clear the Level : " + Player_Score.ToString());
         SceneManager.LoadScene("Start");
         Player_Score = 0;
+        RemainingLives = 3;
         //SceneManager.LoadScene("Win State");
     }
+
+    IEnumerator loadTwoLevel()
+    {
+       
+        RemainingTiles = 28;
+        Player_Score += 1000;
+        Debug.Log("Clear the Level : " + Player_Score.ToString());
+        
+        Player_Score = 0;
+        RemainingLives = 3;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("GameOver");
+
+    }
+
 
     IEnumerator SpawnRedBall()
     {
