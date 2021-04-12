@@ -10,7 +10,7 @@ public class GreenBallControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -37,12 +37,27 @@ public class GreenBallControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Qbert")
+        if (other.tag == "Qbert")
         {
+            for(int i = 0; i<50000;i++)
+            {
+                Time.timeScale = 0;
+                Debug.Log(i);
+            }
+            //Time.timeScale = 0;
+            //StartCoroutine(waitsome());
+
+            Time.timeScale = 1;
+
             GameFlow.Player_Score += 100;
             Debug.Log("Collect the Green_Ball : " + GameFlow.Player_Score.ToString());
             PickupSound.clip = GreenBallPickupSound;
             PickupSound.Play();
         }
+    }
+
+    IEnumerator waitsome()
+    {
+        yield return new WaitForSeconds(5);
     }
 }

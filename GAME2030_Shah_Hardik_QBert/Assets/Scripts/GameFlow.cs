@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-
 public class GameFlow : MonoBehaviour
 {
     public static int RemainingTiles = 28;
@@ -16,11 +15,11 @@ public class GameFlow : MonoBehaviour
     public static int Player_Score = 0;
     public TMP_Text Player_ScoreText;
 
-
     public GameObject Image1;
     public GameObject Image2;
 
-    //public float delay = 10000.0f;
+    public AudioSource WinnerSound;
+    public AudioClip Winner;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +28,7 @@ public class GameFlow : MonoBehaviour
         {
             StartCoroutine(SpawnRedBall());
             StartCoroutine(SpawnGreenBall());
-            //    StartCoroutine(SpawnCoilyBall());
+            //StartCoroutine(SpawnCoilyBall());
             SpawnCoilyBall();
         }   
     }
@@ -40,38 +39,25 @@ public class GameFlow : MonoBehaviour
         if(RemainingTiles < 0)
         {
             Debug.Log("You Win");
+            WinnerSound.clip = Winner;
+            WinnerSound.Play();
             StartCoroutine(loadNextLevel());
-            //SceneManager.LoadScene("Start");
-          
-           
         }
 
         if(RemainingLives == 0)
         {
-            //SceneManager.LoadScene("GameOver");
-            //Debug.Log("Changing to GameOver");
-
-            //Debug.Log("Finished  GameOver");
-            ////StartCoroutine(LoadLevelAfterDelay(delay));
-            //StartCoroutine(loadNextLevel());
-            ////SceneManager.LoadScene("Start");
-            ////StartCoroutine(loadNextLevel());
-            //Debug.Log("Changed to Start");
             StartCoroutine(loadTwoLevel());
         }
 
         if(RemainingLives == 2)
         {
-            //Image1.transform.position = new Vector3(1000, 1000, 1000);
             Destroy(Image1);
         }
 
         if (RemainingLives == 1)
         {
-            //Image2.transform.position = new Vector3(1000, 1000, 1000);
             Destroy(Image2);
         }
-
         Player_ScoreText.text = Player_Score.ToString();
     }
 
@@ -83,13 +69,14 @@ public class GameFlow : MonoBehaviour
         Debug.Log("Clear the Level : " + Player_Score.ToString());
         SceneManager.LoadScene("Start");
         Player_Score = 0;
+        Debug.Log("Cleared : " + Player_Score.ToString());
         RemainingLives = 3;
+        Debug.Log("Remaining Lives Reset : " + RemainingLives.ToString());
         //SceneManager.LoadScene("Win State");
     }
 
     IEnumerator loadTwoLevel()
     {
-       
         RemainingTiles = 28;
         Player_Score += 1000;
         Debug.Log("Clear the Level : " + Player_Score.ToString());
@@ -98,9 +85,7 @@ public class GameFlow : MonoBehaviour
         RemainingLives = 3;
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("GameOver");
-
     }
-
 
     IEnumerator SpawnRedBall()
     {
@@ -116,16 +101,8 @@ public class GameFlow : MonoBehaviour
         StartCoroutine(SpawnGreenBall());
     }
 
-    //IEnumerator LoadLevelAfterDelay(float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
-       
-    //}
-
     public void SpawnCoilyBall()
     {
         Instantiate(Coily_Ball, new Vector3(1, 2, -1), Coily_Ball.rotation);
-       // StartCoroutine(SpawnCoilyBall());
     }
-
 }
